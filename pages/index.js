@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Loader from '../components/Loader'
+import toast from 'react-hot-toast'
 
 export default function Home() {
   return (
@@ -15,7 +17,8 @@ export default function Home() {
             Next.js!
           </a>
         </h1>
-
+        <Loader show />
+        <button onClick={() => toast.success('hello toast!')}>toast me</button>
         <p className="mt-3 text-2xl">
           Get started by editing{' '}
           <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
